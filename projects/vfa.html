@@ -29,11 +29,14 @@ lihong@google.com (for Google related work) <br/>
 
 <p/><hr>
 
-<h2>Value Function Approximation (VFA) and Generalization</h2>
+<h2>Value Function and Policy Learning</h2>
 
-How can we estimate long-term reward of taking an action in a given state, using a compact representation?  This question lies in the heart of modern reinforcement learning, and is a key component in many prominent RL applications.  This problem is notoriously challenging (the ``deadly triad''): many of the classic algorithms are known to diverge, and it does happen very often in practice.  Our recent work (SBEED) provides the first provably convergent VFA algorithm in the controlled case, with nonlinear funnction classes, and with off-policy data.
+How can we estimate and optimize long-term reward of taking an action in a given state, using a compact representation?  This question lies in the heart of modern reinforcement learning, and is a key component in many prominent RL applications.  The problem becomes particularly challenging when function approximation is used, especially in the presence of off-policy data. 
+<!--This problem is notoriously challenging (the ``deadly triad''): many of the classic algorithms are known to diverge, and it does happen very often in practice.  Our recent work (SBEED) provides the first provably convergent VFA algorithm in the controlled case, with nonlinear funnction classes, and with off-policy data.-->
 
 <ul>
+
+<li>J. Mei, C. Xiao, B. Dai, <b>L. Li</b>, Cs. Szepesvari, D. Schuurmans: Escaping the gravitational pull of softmax.  In <i>Advances in Neural Information Processing Systems 33 (NeurIPS)</i>, oral, 2020.
   
 <li>Y. Feng, <b>L. Li</b>, and Q. Liu: A kernel loss for solving the Bellman equation.  In <i>Advances in Neural Information Processing Systems 32 (NeurIPS)</i>, 2019. [<a href="https://papers.nips.cc/paper/9679-a-kernel-loss-for-solving-the-bellman-equation">link</a>, <a href="http://arxiv.org/abs/1905.10506">arXiv</a>]
 
