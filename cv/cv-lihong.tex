@@ -10,7 +10,7 @@
 \usepackage{anysize}
 %\marginsize{29mm}{29mm}{26mm}{26mm}
 \marginsize{25mm}{25mm}{18mm}{18mm}
-
+\usepackage{hyperref}
 \usepackage{url}
 
 \newcommand{\selffont}[1]{{\textit{#1}}}
@@ -54,7 +54,7 @@
 
 \vspace{-15mm} \noindent \makebox[\columnwidth][c]{
   \parbox[l]{0.36\columnwidth}{
-    Senior Principal Scientist \\
+    Senior Principal Applied Scientist \\
     Amazon.com, Inc. \\
     Seattle, WA, USA
   }
@@ -165,7 +165,7 @@ Web search, advertising, and conversational systems.
 \subsection*{\textsc{\underline{Research \& Industry Experience}}}
 
 \begin{tabular}{p{30mm} p{120mm}}
-10/2020 -- present & Senior Principal Scientist at Amazon (Seattle, WA) \\
+10/2020 -- present & Senior Principal Applied Scientist at Amazon (Seattle, WA) \\
 10/2017 -- 10/2020 & Research Scientist at Google (Kirkland, WA) \\
 06/2012 -- 10/2017 & Senior, Principal, Senior Principal Researcher at Microsoft Research (Redmond, WA) \\
 %03/2017 -- 10/2017 & Senior Principal Researcher at Microsoft Research (Redmond) \\
@@ -225,7 +225,7 @@ Web search, advertising, and conversational systems.
 \subsection*{\textsc{\underline{Teaching/Advising Experience}}}
 
 \begin{tabular}{p{30mm} p{120mm}}
-2018 -- present & Supervised research interns at Google \\
+2018 -- 2020 & Supervised research interns at Google \\
 2013--2017 & Supervised student interns at Microsoft Research \\
                    & {\small\textmd{Projects on reinforcement learning, multi-armed bandits, imitation learning and Web search}} \\
 %Spring 2014 	   & PhD dissertation defense committee (Olivier Nicol), INRIA, France \\
@@ -259,9 +259,9 @@ Spring 2009 & Guest lecturer for a graduate-level course at the Rutgers Universi
 
 \item{International Conference on Artificial Intelligence and Statistic (AISTATS): 2017, 2019}
 
-\item{International Conferences on Learning Representations (ICLR): 2019, 2022}
+\item{International Conferences on Learning Representations (ICLR): 2019, 2022, 2023}
 
-\item{International Conferences on Machine Learning (ICML): 2012--2017, 2019--2021}
+\item{International Conferences on Machine Learning (ICML): 2012--2017, 2019--2022}
 
 \item{International Joint Conferences on Artificial Intelligence (IJCAI): 2011, 2016, 2017}
 
@@ -402,6 +402,8 @@ Spring 2009 & Guest lecturer for a graduate-level course at the Rutgers Universi
 
 \item{Neurocomputing}
 
+\item{Statistical Science}
+
 \end{compactitem} \negitemspace
 
 \item{Referee for conferences (including services as area chair and senior program committee member):}
@@ -452,18 +454,23 @@ Intelligence): 2010, 2012, 2016}
 
 \item{Vowpal Wabbit: an open source project started with John Langford and
 Alexander L. Strehl for fast online learning in large-scale
-prediction problems.  \\
-URL: 
-%http://www.hunch.net/\~{}vw~
-\url{https://github.com/VowpalWabbit/vowpal_wabbit/wiki}
-}
+prediction problems. \href{https://github.com/VowpalWabbit/vowpal_wabbit/wiki}{[link]}}
 
-\item{Yahoo! Front Page Today Module User Click Log Dataset: the first large-scale real-life dataset that supports unbiased evaluation of multi-armed bandit algorithms (with help from Wei Chu).  \\
-URL: \url{http://webscope.sandbox.yahoo.com/catalog.php?datatype=r}}
+\item{Yahoo! Front Page Today Module User Click Log Dataset: the first large-scale real-life dataset that supports unbiased evaluation of multi-armed bandit algorithms (with help from Wei Chu). \href{http://webscope.sandbox.yahoo.com/catalog.php?datatype=r}{[link]}}
 
 %\item{Deep reinforcement learning package in Microsoft CNTK (with Yi Mao et al.)}
 
 \end{compactitem} \negitemspace
+
+\item{Blog posts} \negitemspace
+
+\begin{compactitem}
+
+\item{Google AI: ``Off-policy estimation for infinite-horizon reinforcement learning'', April 17, 2020. \href{https://ai.googleblog.com/2020/04/off-policy-estimation-for-infinite.html}{[link]}}
+
+\item{Amazon Science: ``Decisions, decisions: Lihong Li's Amazon Ads reinforcement learning research'', Jan 19, 2022. \href{https://www.amazon.science/working-at-amazon/amazon-advertising-lihong-li-using-reinforcement-learning-algorithms}{[link]}}
+
+\end{compactitem}
 
 \end{compactitem}
 
@@ -503,6 +510,7 @@ The talks are grouped into several clusters based on their topics; the actual co
 
 \item{Off-policy Learning and Counterfactual Evaluation}
 \begin{compactitem}
+\item{RecSys Workshop on Causality, Counterfactuals, Sequential Decision-Making \& Reinforcement Learning, Seattle, WA, USA. September, 2022.}
 \item{School of Electrical Engineering and Computer Science, Oregon State University.  November, 2021.}
 \item{AI for Economics Seminar.  December, 2020.}
 \item{Department of Computer Science, University of California, Los Angeles, CA, USA.  October, 2020.}
@@ -529,6 +537,7 @@ The talks are grouped into several clusters based on their topics; the actual co
 \begin{compactitem}
 %\item{Huawei, China.  September, 2018.}
 %\item{Horizon Robotics, Beijing, China.  April, 2018.}
+\item{Foster School of Business, University of Washington, Seattle, USA. 2022.}  % May 2022
 \item{AI for Everyone Workshop Series, Google Beijing, China.  April, 2018.}
 \item{Department of Computer Science and Technology, Tsinghua University, Beijing, China.  April, 2018.}
 \item{Algorithms for Reinforcement Learning Minisymposium, SIAM Conference on Optimization, Vancouver, BC, Canada.  May, 2017.}
@@ -589,6 +598,11 @@ Laboratories America, Cupertino, CA, USA.  April 2009.}
 \item{Text Analysis and Machine Learning Group, University of
 Ottawa, Ottawa, ON, Canada.  May 2008.}
 \end{compactitem} \negitemspace
+
+\item{Others}
+\begin{compactitem}
+\item{Guest lecture on ``batch reinforcement learning'' at Stanford CS234 (Prof. E. Brunskill), March 2022.}
+\end{compactitem}
 
 \end{compactitem}
 
@@ -652,9 +666,17 @@ Universal Computer Science}, 13(9):1246--1269, 2007.}
 
 \begin{compactenum}[(C1)]
 
+\item{X. Chen, J. Hu, C. Jin, \myself, and L. Wang: Understanding domain randomization for sim-to-real transfer. In \venuefont{the 10th International Conference on Learning Representations (ICLR)}, 2022.}
+
 \item{C. Xiao, Y. Wu, T. Lattimore, B. Dai, J. Mei, \myself, Cs. Szepesvari, and D. Schuurmans: On the optimality of batch policy optimization algorithms. In \venuefont{the 38th International Conference on Machine Learning (ICML)}, 2021.}
 
-\item{X. Chen, J. Hu, C. Jin, \myself, and L. Wang: Near-optimal representation learning for linear bandits and linear RL. In \venuefont{the 38th International Conference on Machine Learning (ICML)}, 2021.}
+\item{J. Hu, X. Chen, C. Jin, \myself, and L. Wang: Near-optimal representation learning for linear bandits and linear RL. In \venuefont{the 38th International Conference on Machine Learning (ICML)}, 2021.}
+
+\item{X. Chen, J. Hu, C. Jin, \myself, and L. Wang: Efficient reinforcement learning in factored MDPs with application to constrained RL. In \venuefont{the 9th International Conference on Learning Representations (ICLR)}, 2021.}
+
+\item{W. Zhang, D. Zhou, \myself, and Q. Gu: Neural Thompson sampling. In \venuefont{the 9th International Conference on Learning Representations (ICLR)}, 2021.}
+
+\item{A. Bennett, N. Kallus, \myself, and A. Mousavi: Off-policy evaluation in infinite-horizon reinforcement learning with latent confounders. In \venuefont{the 24th International Conference on Artificial Intelligence and Statistics (AISTATS)}, 2021.}
 
 \item{J. Mei, C. Xiao, B. Dai, \myself, Cs. Szepesvari, and D. Schuurmans: Escaping the gravitational pull of softmax. In \venuefont{Advances in Neural Information Processing Systems 33 (NeurIPS)}, oral, 2020.}
 
@@ -846,9 +868,15 @@ Intelligence}, LNCS 2903, 2003.}
 
 \end{compactenum} \negitemspace
 
-\paragraph{Other Papers} \negitemspace
+\paragraph{Other} \negitemspace
 
 \begin{compactenum}[(O1)]
+
+\item{Z. Tang, Y. Duan, S. Zhu, S. Zhang, and \myself: Estimating Long-term Effects from Experimental Data. RecSys Industry Track, 2022.}
+
+\item{Y. Li, A.  Geramifard, \myself, Cs. Szepesv\'{a}ri, and T. Wang: Guest editorial: special issue on reinforcement learning for real life. Machine Learning, 110(9):2291--2293, 2021.}
+
+\item{Y. Liu and \myself: A map of bandits for E-commerce. KDD workshop on multi-armed bandits and reinforcement learning (MARBLE), 2021.}
 
 \item{X. Li, Z.C. Lipton, B. Dhingra, \myself, J. Gao, Y.-N. Chen: A user simulator for task-completion dialogues.  MSR technical report, December 2016.}
 
