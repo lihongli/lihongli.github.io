@@ -11,11 +11,11 @@ document.write(`
 
 <h1> <img src="./img/lihong-pro.jpg"> Lihong Li (<img src="./img/chinese-name.jpg" height="25">)</h1>
 
-Senior Principal Scientist <br/>
-Amazon<br/><br/>
-<a href="mailto:lihongli.cs@gmail.com">lihongli.cs@gmail.com</a> (for general academic work) <br/>
-<a href="mailto:llh@amazon.com">llh@amazon.com</a> (for Amazon related work) <br/>
-Seattle, WA, USA<br/>
+AI Research Scientist <br/>
+Meta Platforms, Inc.<br/><br/>
+<a href="mailto:lihongli.cs@gmail.com">lihongli.cs@gmail.com</a> (for general academic and professional topics) <br/>
+<a href="mailto:llh@amazon.com">lihongli@meta.com</a> (for Meta related topics) <br/>
+Bellevue, WA, USA<br/>
 <p>
 
 <p/><hr>
