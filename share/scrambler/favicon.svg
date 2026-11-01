@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Egg icon">
+  <rect width="64" height="64" rx="14" fill="#147364"/>
+  <path d="M32 7C22 7 13 24 13 40c0 13 8 21 19 21s19-8 19-21C51 24 42 7 32 7Z" fill="#fffaf0"/>
+  <circle cx="32" cy="40" r="9" fill="#f2b445"/>
+</svg>
