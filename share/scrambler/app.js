@@ -201,11 +201,25 @@
     $('score-panel').classList.toggle('is-unreachable', !model.l3Reached && !score.demoCanLimitFail);
     $('score-value').textContent = score.demoCanLimitFail ? 'FAIL' : !model.l3Reached ? 'NO L3' : number(score.totalScore, 2);
     $('score-unit').hidden = score.demoCanLimitFail || !model.l3Reached;
-    $('score-breakdown').textContent = score.demoCanLimitFail
-      ? `Egg tip crosses L1 ${number(score.failingCrossingCmLeft, 1)} cm left of C, beyond the 100 cm mark.`
-      : !model.l3Reached
-        ? 'The egg-tip arc never reaches L3, so this L3-based distance score is unavailable.'
-        : `100 base + ${number(score.distanceScore, 2)} distance (2 × ${number(score.vehicleDistanceCm, 1)} cm at L3) + ${number(score.estimatedTimeSeconds, 2)} estimated time (${number(model.length * 100, 1)} cm ÷ ${number(score.estimatedSpeedCmPerSecond, 1)} cm/s) + ${number(score.canBonus, 2)} can bonus + 0 penalties.`;
+    $('score-distance-calc').textContent = model.l3Reached ? `2 × ${number(score.vehicleDistanceCm, 1)} cm at L3` : 'L3 not reached';
+    $('score-distance-points').textContent = model.l3Reached ? number(score.distanceScore, 2) : '—';
+    $('score-time-calc').textContent = `${number(model.length * 100, 1)} cm ÷ ${number(score.estimatedSpeedCmPerSecond, 1)} cm/s`;
+    $('score-time-points').textContent = number(score.estimatedTimeSeconds, 2);
+    $('score-can-calc').textContent = score.canBonusEarned
+      ? `−0.5 × (110 − ${number(score.cans.insideGapCm, 1)} cm)`
+      : 'Not earned';
+    $('score-can-points').textContent = number(score.canBonus, 2);
+    const scoreUnavailable = score.demoCanLimitFail || !model.l3Reached;
+    $('score-equation').hidden = scoreUnavailable;
+    $('score-status').hidden = !scoreUnavailable;
+    if (scoreUnavailable) {
+      $('score-status').textContent = score.demoCanLimitFail
+        ? `No numeric score: egg tip crosses L1 ${number(score.failingCrossingCmLeft, 1)} cm left of C, beyond the 100 cm practice limit.`
+        : 'No numeric score: the egg-tip arc never reaches L3, so distance at L3 is unavailable.';
+    } else {
+      const canTerm = score.canBonus < 0 ? `− ${number(-score.canBonus, 2)}` : `+ ${number(score.canBonus, 2)}`;
+      $('score-equation').textContent = `100.00 + ${number(score.distanceScore, 2)} + ${number(score.estimatedTimeSeconds, 2)} ${canTerm} + 0.00 = ${number(score.totalScore, 2)} points`;
+    }
     $('score-can-detail').textContent = `Inside can gap: ${number(score.cans.insideGapCm, 1)} cm. ${score.canStatus} ${score.canBonusEarned ? `Can bonus: ${number(score.canBonus, 2)} points.` : 'Can bonus: 0 points.'}`;
     const xText = model.crossingError <= 0.001 ? 'X reached within 0.1 cm.' : `X missed by ${number(model.crossingError * 100, 2)} cm at the closest approach.`;
     $('x-miss-detail').textContent = model.crossingError <= 0.001 ? 'Within 0.1 cm of X' : 'Adjust angle and aiming box';
@@ -433,6 +447,14 @@
   }));
   $('reset').addEventListener('click', () => { clearTimeout(timer); update('start'); });
   $('launch').addEventListener('click', () => { clearTimeout(timer); update('launch'); });
+  $('defaults').addEventListener('click', () => {
+    clearTimeout(timer);
+    $('crossing').value = '85';
+    $('distance').value = '700';
+    $('speed').value = '300';
+    applyRecommendedStartingSettings();
+    update('start');
+  });
   $('settings').addEventListener('submit', event => { event.preventDefault(); clearTimeout(timer); update('launch'); });
   loadCalibrationState();
   applyRecommendedStartingSettings();
